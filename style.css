@@ -1,0 +1,908 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'montserrat';
+     color: black;
+     font-family: 'Anta', sans-serif;
+ }
+
+ html,
+ body {
+     height: 100%;
+     width: 100%;
+     overflow-x: hidden;
+ }
+
+ #main{
+    background-color: #EFEAE3;
+    z-index: 10;
+    position: relative;
+ }
+
+ .anta-regular {
+     font-family: "Anta", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+ }
+
+ #page1 {
+     min-height: 100vh;
+     width: 100%;
+     background-color: #EFEAE3;
+     position: relative;
+     padding: 30px;
+ }
+
+ nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     margin-bottom: 80px;
+     padding: 0 20px;
+ }
+
+ nav img {
+     cursor: pointer;
+ }
+
+ nav h4{
+    display: none;
+ }
+
+ .sidebar {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     flex-wrap: wrap;
+ }
+
+ .sidebar h3 {
+     position: relative;
+     color: black;
+     border: 1px solid rgb(166, 163, 168);
+     padding: 13px;
+     border-radius: 50px;
+     font-weight: 500;
+     font-size: 17px;
+     cursor: pointer;
+     overflow: hidden;
+ }
+
+ .sidebar h3 a {
+     text-decoration: none;
+     z-index: 9;
+     position: relative;
+     color: black;
+ }
+
+ .sidebar h3:hover a {
+     color: white;
+ }
+
+ .sidebar h3::after {
+     content: "";
+     background-color: black;
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     bottom: -100%;
+     transition: all ease 0.3s;
+ }
+
+ .sidebar h3:hover::after {
+     bottom: 0;
+     border-radius: 1;
+     color: white;
+ }
+
+ #center {
+     height: auto;
+     min-height: 60vh;
+     width: 100%;
+     display: flex;
+     align-items: flex-end;
+     justify-content: space-between;
+     border-bottom: 1px solid rgb(73, 71, 71);
+     padding: 20px 0;
+ }
+
+ #center .left {
+     width: 450px;
+     font-size: 1.7rem;
+     font-weight: 900;
+     line-height: 2vw;
+ }
+
+ #center h4 {
+     font-size: 9rem;
+     line-height: 9vw;
+     text-align: right;
+ }
+
+ #page1 video {
+     width: 100%;
+     margin-top: 100px;
+     border-radius: 20px;
+     position: relative;
+ }
+
+ #page1 .anime0 {
+     height: 300px;
+     width: 300px;
+     position: absolute;
+     right: 0;
+     top: 100vh;
+ }
+
+ #page1 .anime1,
+ #page1 .anime2,
+ #page1 .anime3 {
+     background-color: #FE320A;
+     filter: blur(20px);
+     height: 300px;
+     width: 300px;
+     position: absolute;
+ }
+
+ #page2 {
+     min-height: 100vh;
+     max-width: 100%;
+     margin: 5vw 0vw;
+     position: relative;
+     background-color: #EFEAE3;
+ }
+
+ .moving-content h2 {
+     font-size: 9vw;
+     display: inline-block;
+ }
+
+ .moving-content {
+     white-space: nowrap;
+     overflow-x: auto;
+ }
+
+ .moving-content::-webkit-scrollbar {
+     display: none;
+ }
+
+ .con {
+     white-space: nowrap;
+     display: inline-block;
+     animation-name: move;
+     animation-duration: 10s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+ }
+
+ .circle {
+     background-color: #FE320A;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     display: inline-block;
+     margin: 0 15px;
+ }
+
+ @keyframes move {
+     from {
+         transform: translateX(0);
+     }
+
+     to {
+         transform: translateX(-100%);
+     }
+ }
+
+ .page2_bottom {
+     height: 80vh;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 30vh;
+     padding: 5vw;
+     position: relative;
+     z-index: 10;
+ }
+
+ .left_side p {
+     font-size: 4vw;
+     margin-bottom: 200px;
+     font-weight: 800;
+     width: 85%;
+ }
+
+ .right_side img {
+     width: 75%;
+     border-radius: 20px;
+     margin-bottom: 30px;
+     margin-left: 50px;
+ }
+
+ .right_side p {
+     font-size: 1.2vw;
+     font-weight: 100;
+     z-index: 5;
+ }
+
+ .bg-ani {
+     width: 300px;
+     height: 300px;
+     border-radius: 50%;
+     background: linear-gradient(to top right, #FE320A, #fe900a);
+     position: absolute;
+     top: 50%;
+     left: 22%;
+     filter: blur(30px);
+     animation: ani3 4s infinite alternate ease-in-out;
+ }
+
+ @keyframes ani1 {
+     from {
+         transform: translate(0%, 0%);
+     }
+     to {
+         transform: translate(30%, -20%);
+     }
+ }
+
+ @keyframes ani2 {
+     from {
+         transform: translate(0%, -10%);
+     }
+     to {
+         transform: translate(-20%, 10%);
+     }
+ }
+
+ @keyframes ani3 {
+     from {
+         transform: translate(0%, 0%) skew(0);
+     }
+     to {
+         transform: translate(-10%, 10%) skew(-10deg);
+     }
+ }
+
+ #page3 {
+     min-height: 100vh;
+     width: 100%;
+     background-color: #EFEAE3;
+ }
+
+ #page3 .heading {
+     margin-left: 2vw;
+     margin-top: 12vw;
+ }
+
+ #page3 .circle {
+     width: 6px;
+     height: 6px;
+     margin: 0;
+     padding: 0;
+     display: inline-block;
+     white-space: nowrap;
+ }
+
+ .projects {
+     margin: 5vw 0;
+ }
+
+ .project {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 2px solid black;
+     padding: 25px;
+     width: 100%;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .project h3 {
+     font-size: 3.5vw;
+     z-index: 10;
+ }
+
+ .project .right {
+     font-size: 1.2vw;
+     z-index: 10;
+ }
+
+ .project .down {
+     font-size: 1vw;
+     color: gray;
+ }
+
+ .project .overlay{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: #FF9831;
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.3s;
+}
+
+.project:hover .overlay{
+    top: 0;
+}
+
+ #page3 h6{
+   border: 1px solid rgb(166, 163, 168);
+   margin: 2vw;
+   padding: 15px 15px;
+   border-radius: 25px;
+   position: relative;
+   font-size: 1.4vw;
+   width: 170px;
+   overflow: hidden;
+}
+
+#page3 h6::after{
+    content: "";
+    background-color: black;
+    height: 90px;
+    width: 180px;
+    left: -5%;
+    top: 100%;
+    position: absolute;
+    border-radius: 50%;
+    transition: all ease-in-out 0.4s;
+}
+    
+    #page3 h6:hover::after{
+        top: -10%;
+        border-radius: 0;
+   }
+
+   #page3 h6:hover a{
+     color: white;
+    }
+    
+    #page3 h6 a{
+       z-index: 10;
+       position: relative;
+   } 
+
+ #page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#page4 .card{
+    height: 100%;
+    width: 95vw;
+    background-color: black;
+    margin-left: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+
+.card .left p{
+    color: white;
+    padding: 20px;
+    margin-left: 70px;
+    font-size: 18px;
+}
+
+.card .left h3{
+    color: white;
+    padding: 20px;
+    margin-left: 95px;
+   font-size: 3.8rem;
+   border-left: 3px solid red;
+ }
+
+ .card .right img{
+      width: 750px;
+      border-radius: 20px;
+ }
+
+ #page5{
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px;
+    background-color: #EFEAE3;
+ }
+ 
+ #page5 .heading {
+    margin-top: 5vw;
+}
+
+#page5 .circle {
+    width: 6px;
+    height: 6px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.cards{
+    display: flex; 
+    overflow: auto;
+    gap: 60px
+}
+
+.cards .card{
+    border-left: 2px solid grey;
+    padding: 30px;
+    width: 100%;
+    height: 345px;
+    display: inline-block;
+    margin-top: 60px;
+    
+}
+
+.cards .card p{
+    width: 250px;
+}
+
+.footer{
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+
+.footer h1{
+    color: white;
+    position: fixed;
+    bottom: 10%;
+    font-size: 22vw;
+    left: 2%;
+    border-bottom: 2px solid grey;
+}
+
+.footer .upper{
+    top: 0;
+    position: fixed;
+    color: white;
+    display: flex;
+    gap: 700px;
+    padding: 0px 70px;
+}
+
+.upper h3{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.upper h3:hover{
+    color: grey;
+}
+
+.upper p{
+    width: 70%;
+    color: white;
+    font-size: 18px;
+}
+
+.upper .right{
+    width: 40%;
+}
+
+.right input{
+   border-radius: 20px;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 300px;
+    font-size: 18px;
+   right: 25vw;
+}
+.lower{
+    position: fixed;
+    bottom: 3%;
+    display: flex;
+    gap: 250px;
+    left: 4%;
+}
+
+.lower span{
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    #center .left {
+        width: 40%;
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    #center h4 {
+        font-size: 6rem;
+        line-height: 1.1;
+    }
+
+    .right_side img {
+        width: 85%;
+    }
+
+    .right_side p {
+        font-size: 1.6vw;
+    }
+
+    .card .right img {
+        width: 600px;
+    }
+
+    .page2_bottom {
+        padding: 3vw;
+    }
+
+    .footer .upper {
+        gap: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        margin-bottom: 40px;
+    }
+
+    .sidebar {
+        gap: 0.5rem;
+    }
+
+    .sidebar h3 {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    #center {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #center .left {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    #center h4 {
+        font-size: 4rem;
+        text-align: left;
+        line-height: 1.1;
+    }
+
+    .moving-content h2 {
+        font-size: 3rem;
+    }
+
+    .footer .upper {
+        gap: 100px;
+        padding: 0px 30px;
+    }
+
+    .upper .right {
+        width: 100%;
+    }
+
+    .right input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .lower {
+        gap: 50px;
+    }
+
+    .page2_bottom {
+        flex-direction: column;
+        height: auto;
+        margin-top: 15vh;
+        padding: 3vw;
+    }
+
+    .left_side p {
+        font-size: 6vw;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .right_side img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .right_side p {
+        font-size: 3vw;
+    }
+
+    .project h3 {
+        font-size: 5vw;
+    }
+
+    .project .right {
+        font-size: 2vw;
+    }
+
+    #page4 .card {
+        flex-direction: column;
+        padding: 20px;
+        width: 90vw;
+    }
+
+    .card .left h3 {
+        font-size: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .card .right img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards .card p {
+        width: 100%;
+    }
+
+    .footer h1 {
+        font-size: 25vw;
+    }
+
+    .footer .upper {
+        flex-direction: column;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .upper h3 {
+        font-size: 1.5rem;
+    }
+
+    .upper p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .lower {
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .lower span {
+        font-size: 14px;
+    }
+
+    .cards {
+        padding: 15px;
+    }
+
+    .cards .card {
+        padding: 15px;
+        height: auto;
+    }
+
+    .cards .card p {
+        width: 100%;
+    }
+
+    #page4 .card {
+        margin: 15px;
+        width: calc(100% - 30px);
+    }
+
+    .card .left h3 {
+        font-size: 1.5rem;
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+    }
+
+    #page3 .circle,
+    #page5 .circle {
+        width: 5px;
+        height: 5px;
+    }
+
+    #page1 .anime0,
+    #page1 .anime1,
+    #page1 .anime2,
+    #page1 .anime3,
+    .bg-ani {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #page1 {
+        padding: 15px;
+    }
+
+    #center h4 {
+        font-size: 2.5rem;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .project .right {
+        font-size: 0.8rem;
+    }
+
+    .card .left h3 {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+
+    .card .left p {
+        margin-left: 30px;
+    }
+
+    #page3 h6 {
+        font-size: 3vw;
+        width: 140px;
+    }
+
+    .footer h1 {
+        font-size: 3rem;
+    }
+
+    nav {
+        margin-bottom: 30px;
+    }
+
+    .sidebar {
+        gap: 0.3rem;
+        justify-content: center;
+    }
+
+    .sidebar h3 {
+        font-size: 12px;
+        padding: 6px 10px;
+        width: auto;
+    }
+
+    .footer .upper {
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .upper h3 {
+        font-size: 1.5rem;
+    }
+
+    .upper p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .lower {
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .lower span {
+        font-size: 14px;
+    }
+
+    .cards {
+        padding: 15px;
+    }
+
+    .cards .card {
+        padding: 15px;
+        height: auto;
+    }
+
+    .cards .card p {
+        width: 100%;
+    }
+
+    #page4 .card {
+        margin: 15px;
+        width: calc(100% - 30px);
+    }
+
+    .card .left h3 {
+        font-size: 1.5rem;
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .circle {
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+    }
+
+    #page3 .circle,
+    #page5 .circle {
+        width: 4px;
+        height: 4px;
+    }
+
+    #page1 .anime0,
+    #page1 .anime1,
+    #page1 .anime2,
+    #page1 .anime3,
+    .bg-ani {
+        height: 150px;
+        width: 150px;
+    }
+
+    @keyframes ani1 {
+        from {
+            transform: translate(0%, 0%);
+        }
+        to {
+            transform: translate(20%, -15%);
+        }
+    }
+
+    @keyframes ani2 {
+        from {
+            transform: translate(0%, -5%);
+        }
+        to {
+            transform: translate(-15%, 5%);
+        }
+    }
+
+    @keyframes ani3 {
+        from {
+            transform: translate(0%, 0%) skew(0);
+        }
+        to {
+            transform: translate(-5%, 5%) skew(-5deg);
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --animation-speed: 4s;
+}
+
+
+
+ 
